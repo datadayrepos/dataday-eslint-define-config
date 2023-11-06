@@ -1,0 +1,7 @@
+.github/ISSUE_TEMPLATE/
+.yarn/
+.pnpm-store/
+.pnp.cjs
+pnpm-lock.yaml
+coverage/
+dist/

@@ -1,0 +1,33 @@
+{
+  "cSpell.words": [
+    "IIFE",
+    "Quadflieg",
+    "applescript",
+    "asyncgenerator",
+    "asynciterable",
+    "atomtest",
+    "backticks",
+    "embertest",
+    "eslintconfig",
+    "greasemonkey",
+    "importscripts",
+    "linebreak",
+    "nashorn",
+    "nocheck",
+    "prototypejs",
+    "qunit",
+    "readonly",
+    "scripthost",
+    "serviceworker",
+    "shinigami",
+    "typedarrays",
+    "typeof",
+    "weakref",
+    "webextensions"
+  ],
+  "eslint.validate": ["javascript", "typescript"],
+  "files.associations": {
+    "*.json5": "jsonc"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
+}
