@@ -114,3 +114,6 @@ dist
 .tern-port
 
 .DS_Store
+
+# Verified npm archives, never commit.
+.npm-package/

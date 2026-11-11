@@ -13,8 +13,11 @@
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "generate:rules": "tsx ./scripts/generate-rule-files/cli.ts",
-    "prepublishOnly": "pnpm run clean && pnpm run build",
-    "preflight": "pnpm install && run-s format lint ts-check test typecheck"
+    "prepublishOnly": "node scripts/npm-package.mjs guard",
+    "preflight": "pnpm install && run-s format lint ts-check test typecheck",
+    "prepack": "node scripts/npm-package.mjs guard",
+    "pack:release": "node scripts/npm-package.mjs pack",
+    "pub": "node scripts/npm-package.mjs publish"
   },
   "type": "module",
   "main": "dist/index.cjs",
