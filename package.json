@@ -1,6 +1,6 @@
 {
   "name": "@datadayrepos/eslint-define-config",
-  "version": "1.24.13",
+  "version": "1.24.14",
   "description": "Provide a defineConfig function for .eslintrc.js files",
   "scripts": {
     "clean": "rimraf dist",
