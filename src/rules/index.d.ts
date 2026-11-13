@@ -1,4 +1,4 @@
-import { MergeIntersection } from '../utils';
+import type { MergeIntersection } from '../utils';
 import type { DeprecationRules } from './deprecation';
 import type { EslintRules } from './eslint';
 import type { EslintCommentsRules } from './eslint-comments';

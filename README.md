@@ -20,12 +20,13 @@
 </p>
 
 # eslint-define-config
+
 Disconnected fork of original at: https://github.com/eslint-types/eslint-define-config
-changes: 
+changes:
+
 - reexport rules for the plugins
 - allows overrides of rules
 - supprots renaming rules
-
 
 Provide a `defineConfig` function for `.eslintrc.js`, and a `defineFlatConfig` function for `eslint.config.js` files.
 
@@ -102,6 +103,26 @@ _Click on the thumbnail to play the video_
 <a href="https://user-images.githubusercontent.com/7195563/112726158-4a19e780-8f1c-11eb-8cc6-4ea6c100137f.mp4" target="_blank">
   <img src="https://user-images.githubusercontent.com/7195563/112726343-30c56b00-8f1d-11eb-9b92-260c530caf1b.png" alt="Video" width="600px"/>
 </a>
+
+# Development
+
+Development, rule generation and CI require Node.js 22 and the pnpm version pinned
+in `package.json`. The published package still targets Node.js 18; its public type
+declarations are maintained separately from generator dependency updates.
+`tsconfig.dev.json` resolves modern tooling exports without changing the published
+`tsconfig.json` or disabling declaration checks. tsup stays on 8.5.0 because
+8.5.1 imports a declaration file missing from its archive; its optional SWC peer
+is installed for type checking.
+
+Run `corepack pnpm install --frozen-lockfile` before the existing build, lint,
+TypeScript, unit-test and type-test checks. The full dependency audit remains a
+blocking check in `shell/deploy.sh`; do not regenerate published rule declarations
+as a side effect of updating development tooling.
+
+The scoped pnpm overrides provide security fixes for the development dependency
+graph. The Vue/Pug tokenizer override keeps the Vue profiles on a tested parser 10
+and tokenizer 1 combination. Do not replace these boundaries with ignored audit
+findings or ignored peer-dependency errors.
 
 # Credits
 
