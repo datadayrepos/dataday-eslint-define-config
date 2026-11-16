@@ -5,3 +5,6 @@
 pnpm-lock.yaml
 coverage/
 dist/
+
+# Canonical Hub updater: keep its reviewed source bytes unchanged.
+/shell/check-private-updates/main.mjs

@@ -1,6 +1,6 @@
 {
   "name": "@datadayrepos/eslint-define-config",
-  "version": "1.24.14",
+  "version": "1.24.15",
   "description": "Provide a defineConfig function for .eslintrc.js files",
   "scripts": {
     "clean": "rimraf dist",
@@ -52,6 +52,7 @@
     "tsconfig.json"
   ],
   "devDependencies": {
+    "semver": "7.7.4",
     "@graphql-eslint/eslint-plugin": "~4.4.2",
     "@intlify/eslint-plugin-vue-i18n": "~4.5.1",
     "@poppinss/cliui": "~3.0.5",
